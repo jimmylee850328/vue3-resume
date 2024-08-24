@@ -23,7 +23,7 @@
       :class="[
         'bg-[#f5f1e8] fixed left-0 top-0 h-full w-64 p-8 flex flex-col justify-between transition-transform duration-300 ease-in-out z-40',
         isMenuOpen ? 'translate-x-0' : '-translate-x-full',
-        'md:translate-x-0 md:w-1/5 md:relative'
+        'md:translate-x-0 md:w-1/5'
       ]"
     >
       <div>
@@ -61,30 +61,19 @@
           <!-- 第一個 Section -->
           <div class="section">
             <div class="flex items-center justify-center h-screen">
-              <div class="relative w-full max-w-md px-4 md:px-0">
-                <!-- 粉紅色背景框 -->
-                <div
-                  class="absolute -top-5 left-5 w-full md:w-[480px] h-[300px] bg-[#d3756e]"
-                ></div>
-
+              <div class="w-full max-w-md px-4 md:px-0">
                 <!-- 圖片 -->
+                <div class="font-pacifico text-center text-[#CC6E62] text-3xl mb-4">Resume</div>
+
                 <img
                   src="https://lube4100.github.io/img/kv-pic.jpg"
-                  alt="Beach scene"
                   class="relative z-10 w-full md:w-[450px] h-auto md:h-[330px] object-cover"
                 />
 
                 <!-- 文字內容 -->
-                <div class="absolute bottom-0 left-0 transform translate-y-full pl-4 pt-2">
+                <div class="pl-4 pt-2">
                   <p class="text-[#d1a39e] text-lg">TZU-JIE CHAO</p>
                   <div class="w-12 h-0.5 bg-[#d1a39e] mt-2"></div>
-                </div>
-
-                <!-- 垂直文字 -->
-                <div
-                  class="absolute top-[50%] left-0 transform -rotate-90 origin-bottom-left text-[#CC6E62] text-lg z-10 hidden md:block"
-                >
-                  resume
                 </div>
               </div>
             </div>
@@ -124,7 +113,6 @@ const fullpage = ref(null)
 const isMenuOpen = ref(false)
 
 const options = {
-  licenseKey: 'YOUR_KEY_HERE',
   afterLoad: afterLoad,
   scrollOverflow: true,
   scrollBar: false,
