@@ -2,7 +2,7 @@
   <div class="section">
     <div class="flex items-center justify-center h-screen">
       <div>
-        <div class="font-pacifico text-center text-[#CC6E62] text-3xl mb-4">Resume</div>
+        <div class="font-pacifico text-center text-[#CC6E62] text-4xl mb-4 font-bold">Resume</div>
 
         <img
           src="https://lube4100.github.io/img/kv-pic.jpg"
