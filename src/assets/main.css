@@ -3,3 +3,63 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.fp-controlArrow.fp-prev::before {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid #ffffff;
+  bottom: -17px;
+  left: -7px;
+}
+.fp-controlArrow.fp-prev {
+  /* margin-left: 180px; */
+  left: 30px;
+  width: 27px;
+  height: 1px;
+  background-color: #ffffff;
+  border-style: none;
+  margin-top: 0;
+}
+.fp-controlArrow.fp-prev::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 1px;
+  background-color: #ffffff;
+  -webkit-transform: rotate(-34deg);
+  transform: rotate(-34deg);
+  bottom: 3px;
+  left: 0;
+}
+.fp-controlArrow.fp-next::before {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid #ffffff;
+  bottom: -17px;
+  left: -7px;
+}
+.fp-controlArrow.fp-next {
+  right: 30px;
+  width: 27px;
+  height: 1px;
+  background-color: #ffffff;
+  border-style: none;
+  margin-top: 0;
+}
+.fp-controlArrow.fp-next::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 1px;
+  background-color: #ffffff;
+  -webkit-transform: rotate(34deg);
+  transform: rotate(34deg);
+  bottom: 3px;
+  right: 0;
+}

@@ -20,10 +20,11 @@
 
     <!-- 左側邊欄 -->
     <nav
+      id="menu"
       :class="[
         'bg-[#f5f1e8] fixed left-0 top-0 h-full w-64 p-8 flex flex-col justify-between transition-transform duration-300 ease-in-out z-40',
         isMenuOpen ? 'translate-x-0' : '-translate-x-full',
-        'md:translate-x-0 md:w-1/5'
+        'md:translate-x-0 lg:w-1/6 md:w-1/5'
       ]"
     >
       <div>
@@ -54,43 +55,18 @@
     <!-- Fullpage 內容 -->
     <div class="md:flex">
       <!-- 這個 div 用來在大螢幕上佔位，確保內容區域寬度正確 -->
-      <div class="hidden md:block md:w-1/5"></div>
+      <div class="hidden md:block lg:w-1/6 md:w-1/5"></div>
 
-      <div class="w-full md:w-4/5">
+      <div class="w-full lg:w-5/6 md:w-4/5">
         <full-page :options="options" id="fullpage" ref="fullpage">
           <!-- 第一個 Section -->
-          <div class="section">
-            <div class="flex items-center justify-center h-screen">
-              <div class="w-full max-w-md px-4 md:px-0">
-                <!-- 圖片 -->
-                <div class="font-pacifico text-center text-[#CC6E62] text-3xl mb-4">Resume</div>
+          <Homepage />
 
-                <img
-                  src="https://lube4100.github.io/img/kv-pic.jpg"
-                  class="relative z-10 w-full md:w-[450px] h-auto md:h-[330px] object-cover"
-                />
-
-                <!-- 文字內容 -->
-                <div class="pl-4 pt-2">
-                  <p class="text-[#d1a39e] text-lg">TZU-JIE CHAO</p>
-                  <div class="w-12 h-0.5 bg-[#d1a39e] mt-2"></div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <!-- 第二個 Section -->
+          <Portfolio />
 
           <!-- 其他 Sections (保持不變) -->
-          <div class="section">
-            <div class="slide">
-              <h3 class="text-center text-2xl">Slide 2.1</h3>
-            </div>
-            <div class="slide">
-              <h3 class="text-center text-2xl">Slide 2.2</h3>
-            </div>
-            <div class="slide">
-              <h3 class="text-center text-2xl">Slide 2.3</h3>
-            </div>
-          </div>
+
           <div class="section">
             <h3 class="text-center text-2xl">Section 3</h3>
           </div>
@@ -107,30 +83,31 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref } from 'vue';
+import Homepage from '@/components/Homepage.vue';
+import Portfolio from '@/components/Portfolio.vue';
 
-const fullpage = ref(null)
-const isMenuOpen = ref(false)
+const fullpage = ref(null);
+const isMenuOpen = ref(false);
 
 const options = {
   afterLoad: afterLoad,
   scrollOverflow: true,
   scrollBar: false,
   menu: '#menu',
-  navigation: true,
   anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],
-  sectionsColor: ['#dcccb2', '#ff5f45', '#0798ec', '#fec401', '#1bcee6']
-}
+  sectionsColor: ['#dcccb2', '#dcccb2', '#dcccb2', '#dcccb2', '#dcccb2']
+};
 
 function afterLoad() {
-  console.log('After load')
+  console.log('After load');
 }
 
 function toggleMenu() {
-  isMenuOpen.value = !isMenuOpen.value
+  isMenuOpen.value = !isMenuOpen.value;
 }
 
 function closeMenu() {
-  isMenuOpen.value = false
+  isMenuOpen.value = false;
 }
 </script>
