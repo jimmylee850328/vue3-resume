@@ -59,17 +59,11 @@
 
       <div class="w-full lg:w-5/6 md:w-4/5">
         <full-page :options="options" id="fullpage" ref="fullpage">
-          <!-- 第一個 Section -->
           <Homepage />
-
-          <!-- 第二個 Section -->
+          <AboutMe />
           <Portfolio />
 
           <!-- 其他 Sections (保持不變) -->
-
-          <div class="section">
-            <h3 class="text-center text-2xl">Section 3</h3>
-          </div>
           <div class="section">
             <h3 class="text-center text-2xl">Section 4</h3>
           </div>
@@ -85,6 +79,7 @@
 <script setup>
 import { ref } from 'vue';
 import Homepage from '@/components/Homepage.vue';
+import AboutMe from '@/components/AboutMe.vue';
 import Portfolio from '@/components/Portfolio.vue';
 
 const fullpage = ref(null);
