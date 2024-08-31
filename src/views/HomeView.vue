@@ -1,6 +1,5 @@
 <template>
   <div class="relative">
-    <!-- 漢堡選單按鈕 (只在小螢幕顯示) -->
     <button @click="toggleMenu" class="fixed top-4 left-4 z-50 text-[#d1a39e] md:hidden">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -18,7 +17,6 @@
       </svg>
     </button>
 
-    <!-- 左側邊欄 -->
     <nav
       id="menu"
       :class="[
@@ -32,17 +30,46 @@
           <span class="border border-[#d1a39e] px-2 py-1">Tina Liu</span>
         </div>
         <ul class="space-y-4 text-[#d1a39e]">
-          <li><a href="#home" @click="closeMenu">首頁</a></li>
-          <li><a href="#about-me" @click="closeMenu">關於我</a></li>
-          <li><a href="#skills" @click="closeMenu">技能</a></li>
-          <li><a href="#portfolio" @click="closeMenu">作品</a></li>
-          <li><a href="#contact" @click="closeMenu">聯絡我</a></li>
+          <li
+            :class="{
+              'font-bold bg-[#d1a39e] text-white px-2 py-1 rounded': currentSection === 'home'
+            }"
+          >
+            <a href="#home" @click="closeMenu">首頁</a>
+          </li>
+          <li
+            :class="{
+              'font-bold bg-[#d1a39e] text-white px-2 py-1 rounded': currentSection === 'about-me'
+            }"
+          >
+            <a href="#about-me" @click="closeMenu">關於我</a>
+          </li>
+          <li
+            :class="{
+              'font-bold bg-[#d1a39e] text-white px-2 py-1 rounded': currentSection === 'skills'
+            }"
+          >
+            <a href="#skills" @click="closeMenu">技能</a>
+          </li>
+          <li
+            :class="{
+              'font-bold bg-[#d1a39e] text-white px-2 py-1 rounded': currentSection === 'portfolio'
+            }"
+          >
+            <a href="#portfolio" @click="closeMenu">作品</a>
+          </li>
+          <li
+            :class="{
+              'font-bold bg-[#d1a39e] text-white px-2 py-1 rounded': currentSection === 'contact'
+            }"
+          >
+            <a href="#contact" @click="closeMenu">聯絡我</a>
+          </li>
         </ul>
       </div>
       <div class="text-sm text-gray-500">© 2024 Tina Liu</div>
     </nav>
 
-    <!-- 遮罩層 (僅在小螢幕且選單開啟時顯示) -->
     <div
       @click="closeMenu"
       :class="[
@@ -52,9 +79,7 @@
       ]"
     ></div>
 
-    <!-- Fullpage 內容 -->
     <div class="md:flex">
-      <!-- 這個 div 用來在大螢幕上佔位，確保內容區域寬度正確 -->
       <div class="hidden md:block lg:w-1/6 md:w-1/5"></div>
 
       <div class="w-full lg:w-5/6 md:w-4/5">
@@ -63,14 +88,7 @@
           <AboutMe />
           <Skills />
           <Portfolio />
-
-          <!-- 其他 Sections (保持不變) -->
-          <div class="section">
-            <h3 class="text-center text-2xl">Section 4</h3>
-          </div>
-          <div class="section">
-            <h3 class="text-center text-2xl">Section 5</h3>
-          </div>
+          <Contact />
         </full-page>
       </div>
     </div>
@@ -83,16 +101,21 @@ import Homepage from '@/components/Homepage.vue';
 import AboutMe from '@/components/AboutMe.vue';
 import Skills from '@/components/Skills.vue';
 import Portfolio from '@/components/Portfolio.vue';
+import Contact from '@/components/Contact.vue';
 
 const fullpage = ref(null);
 const isMenuOpen = ref(false);
+const currentSection = ref('home'); // Add a reactive variable to track the current section
 
 const options = {
   scrollOverflow: true,
   scrollBar: false,
   menu: '#menu',
   anchors: ['home', 'about-me', 'skills', 'portfolio', 'contact'],
-  sectionsColor: ['#dcccb2', '#dcccb2', '#dcccb2', '#dcccb2', '#dcccb2']
+  sectionsColor: ['#dcccb2', '#dcccb2', '#dcccb2', '#dcccb2', '#dcccb2'],
+  afterLoad(origin, destination) {
+    currentSection.value = destination.anchor;
+  }
 };
 
 function toggleMenu() {

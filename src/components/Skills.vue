@@ -35,20 +35,21 @@ const skills = ref([
   {
     category: '前端技能',
     items: [
-      '熟悉 HTML5 與 CSS3 語言',
+      '熟悉 Vue3 語法以及 Vue3 生態系',
       '熟悉 Tailwind CSS 框架',
-      '響應式 RWD 應用開發',
+      '使用 Vite 打包及優化網站',
+      '熟悉 HTML5 與 CSS3 語言',
       '熟悉 JavaScript 與 ES6 知識',
-      '熟悉 Vue3 語法以及 Vue-Router 應用',
+      '響應式 RWD 應用開發',
       '運用 Axios 串接後端 API'
     ]
   },
   {
-    category: '後端與版本控制',
+    category: '後端與其他工具',
     items: [
       '了解 Node.js 與 Express.js 應用',
       '熟悉 Git 指令並依循 Git Flow 進行版本控管',
-      '使用 Python 開發小工具'
+      '使用 Vercel 進行專案部署'
     ]
   }
 ]);
