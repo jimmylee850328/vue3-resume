@@ -4,7 +4,7 @@
       <div class="grid grid-cols-1 md:grid-cols-12 gap-8 max-w-3xl w-full px-4">
         <div class="col-span-12">
           <div
-            class="font-pacifico text-center text-[#CC6E62] text-3xl sm:text-4xl mb-4 md:mb-0 font-bold"
+            class="hidden md:block font-pacifico text-center text-[#CC6E62] text-3xl sm:text-4xl mb-4 md:mb-0 font-bold"
           >
             It's Me
           </div>
@@ -13,7 +13,7 @@
         <div class="col-span-12 md:col-span-4 flex justify-center items-center">
           <img
             src="https://lube4100.github.io/img/me.jpg"
-            class="w-48 h-48 sm:w-64 sm:h-64 rounded-full object-cover"
+            class="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover"
           />
         </div>
 
@@ -44,13 +44,10 @@ import { vueTyperNext } from 'vue-typer-next';
 import 'vue-typer-next/dist/style.css';
 
 const personalIntroduction = ref([
-  '我是趙子潔，',
-  '畢業於淡江資訊傳播學系，',
-  '因緣際會下接觸網頁前端，',
-  '展開一場學習程式的旅程，',
-  '很喜歡打完程式看到成果的成就感，',
-  '雖然途中常常遭遇挫折，但也越挫越勇，',
-  '藉由解決困難與學習新知來充實自己！'
+  '我是劉庭瑋，畢業於真理大學應用日文學系。',
+  '在擔任後端採購專員期間，時常需要預測需求、庫存管理和運輸時間管理，確保交貨準確性及生產計劃的順利進行。',
+  '面對複雜數據和流程時，我發現傳統手動處理的效率不佳，當時我透過 GPT 編寫 Python 程式，在過程中發現程式設計充滿挑戰和成就感，決定離職專心學習程式。',
+  '在待業期間，我花了三個月深入學習 JavaScript 和 Vue 3 生態系統，這段經歷提升了我的技術水平，也使我確定自己喜歡程式，想發揮自己所長成為一名前端工程師。'
 ]);
 
 const isThisPage = ref(false);
