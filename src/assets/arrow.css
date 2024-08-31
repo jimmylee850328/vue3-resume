@@ -1,0 +1,41 @@
+.fp-controlArrow {
+  margin-top: -10px !important;
+}
+
+.fp-arrow.fp-prev {
+  border-width: 10px 10px 10px 0 !important;
+}
+
+.fp-prev {
+  left: 30px !important;
+}
+
+.fp-controlArrow.fp-prev::before {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid #ffffff;
+  bottom: -20px;
+  left: -12px;
+}
+
+.fp-arrow.fp-next {
+  border-width: 10px 0 10px 10px !important;
+}
+
+.fp-controlArrow.fp-next::before {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid #ffffff;
+  bottom: -20px;
+  left: -27px;
+}
+
+.fp-next {
+  right: 30px !important;
+}

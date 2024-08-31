@@ -10,7 +10,7 @@
         />
 
         <div class="pl-4 pt-2">
-          <p class="text-[#d1a39e] text-lg">TZU-JIE CHAO</p>
+          <p class="text-[#d1a39e] text-lg">Liu Ting Wei</p>
           <div class="w-12 h-0.5 bg-[#d1a39e] mt-2"></div>
         </div>
       </div>
@@ -20,8 +20,6 @@
 
 <script setup>
 import { ref } from 'vue';
-
-const message = ref('Hello from Vue 3!');
 </script>
 
 <style scoped></style>

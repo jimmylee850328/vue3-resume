@@ -49,7 +49,7 @@ const personalIntroduction = ref([
 const isPage2 = ref(false);
 
 const checkHash = () => {
-  isPage2.value = window.location.hash === '#page2';
+  isPage2.value = window.location.hash === '#about-me';
 };
 
 onMounted(() => {

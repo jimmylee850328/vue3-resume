@@ -29,17 +29,17 @@
     >
       <div>
         <div class="text-[#d1a39e] font-semibold mb-8">
-          <span class="border border-[#d1a39e] px-2 py-1">LUBE CHAO</span>
+          <span class="border border-[#d1a39e] px-2 py-1">Tina Liu</span>
         </div>
         <ul class="space-y-4 text-[#d1a39e]">
-          <li><a href="#page1" @click="closeMenu">首頁</a></li>
-          <li><a href="#page2" @click="closeMenu">關於我</a></li>
-          <li><a href="#page3" @click="closeMenu">經歷</a></li>
-          <li><a href="#page4" @click="closeMenu">作品</a></li>
-          <li><a href="#page5" @click="closeMenu">聯絡我</a></li>
+          <li><a href="#home" @click="closeMenu">首頁</a></li>
+          <li><a href="#about-me" @click="closeMenu">關於我</a></li>
+          <li><a href="#skills" @click="closeMenu">技能</a></li>
+          <li><a href="#portfolio" @click="closeMenu">作品</a></li>
+          <li><a href="#contact" @click="closeMenu">聯絡我</a></li>
         </ul>
       </div>
-      <div class="text-sm text-gray-500">© 2022 LUBE</div>
+      <div class="text-sm text-gray-500">© 2024 Tina Liu</div>
     </nav>
 
     <!-- 遮罩層 (僅在小螢幕且選單開啟時顯示) -->
@@ -61,6 +61,7 @@
         <full-page :options="options" id="fullpage" ref="fullpage">
           <Homepage />
           <AboutMe />
+          <Skills />
           <Portfolio />
 
           <!-- 其他 Sections (保持不變) -->
@@ -80,23 +81,19 @@
 import { ref } from 'vue';
 import Homepage from '@/components/Homepage.vue';
 import AboutMe from '@/components/AboutMe.vue';
+import Skills from '@/components/Skills.vue';
 import Portfolio from '@/components/Portfolio.vue';
 
 const fullpage = ref(null);
 const isMenuOpen = ref(false);
 
 const options = {
-  afterLoad: afterLoad,
   scrollOverflow: true,
   scrollBar: false,
   menu: '#menu',
-  anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],
+  anchors: ['home', 'about-me', 'skills', 'portfolio', 'contact'],
   sectionsColor: ['#dcccb2', '#dcccb2', '#dcccb2', '#dcccb2', '#dcccb2']
 };
-
-function afterLoad() {
-  console.log('After load');
-}
 
 function toggleMenu() {
   isMenuOpen.value = !isMenuOpen.value;
