@@ -35,35 +35,35 @@
               'font-bold bg-[#d1a39e] text-white px-2 py-1 rounded': currentSection === 'home'
             }"
           >
-            <a href="#home" @click="closeMenu">首頁</a>
+            <a href="#home" class="block w-full" @click="closeMenu">首頁</a>
           </li>
           <li
             :class="{
               'font-bold bg-[#d1a39e] text-white px-2 py-1 rounded': currentSection === 'about-me'
             }"
           >
-            <a href="#about-me" @click="closeMenu">關於我</a>
+            <a href="#about-me" class="block w-full" @click="closeMenu">關於我</a>
           </li>
           <li
             :class="{
               'font-bold bg-[#d1a39e] text-white px-2 py-1 rounded': currentSection === 'skills'
             }"
           >
-            <a href="#skills" @click="closeMenu">技能</a>
+            <a href="#skills" class="block w-full" @click="closeMenu">技能</a>
           </li>
           <li
             :class="{
               'font-bold bg-[#d1a39e] text-white px-2 py-1 rounded': currentSection === 'portfolio'
             }"
           >
-            <a href="#portfolio" @click="closeMenu">作品</a>
+            <a href="#portfolio" class="block w-full" @click="closeMenu">作品</a>
           </li>
           <li
             :class="{
               'font-bold bg-[#d1a39e] text-white px-2 py-1 rounded': currentSection === 'contact'
             }"
           >
-            <a href="#contact" @click="closeMenu">聯絡我</a>
+            <a href="#contact" class="block w-full" @click="closeMenu">聯絡我</a>
           </li>
         </ul>
       </div>
