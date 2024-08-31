@@ -58,7 +58,6 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
 const chiikawaImage = new URL('@/assets/images/contact/chiikawa.png', import.meta.url).href;
 </script>
 
