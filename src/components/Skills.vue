@@ -1,23 +1,23 @@
 <template>
   <div class="section min-h-screen flex items-center justify-center p-4">
     <div class="container mx-auto">
-      <div class="font-pacifico text-center text-[#CC6E62] text-4xl mb-4 font-bold">Skills</div>
+      <div class="font-pacifico text-center text-primary text-4xl mb-8 font-bold">Skills</div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div
           v-for="(category, index) in skills"
           :key="index"
-          class="bg-[#c6af95] p-4 rounded-lg shadow"
+          class="bg-background p-6 rounded-lg shadow-lg border-2 border-accent"
         >
-          <h3 class="text-xl font-semibold mb-3 text-white">{{ category.category }}</h3>
-          <ul class="space-y-2 text-sm md:text-base">
+          <h3 class="text-xl font-semibold mb-4 text-primary">{{ category.category }}</h3>
+          <ul class="space-y-3 text-sm md:text-base">
             <li
               v-for="(item, itemIndex) in category.items"
               :key="itemIndex"
-              class="text-gray-100 flex items-center"
+              class="text-text flex items-center"
             >
-              <div class="my-1">
-                <span class="text-yellow-300 mr-2 flex-shrink-0">&#9733;</span>
+              <div class="flex items-center">
+                <span class="text-accent mr-2 flex-shrink-0">&#9733;</span>
                 <span>{{ item }}</span>
               </div>
             </li>

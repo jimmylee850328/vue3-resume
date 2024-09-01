@@ -1,18 +1,16 @@
 <template>
-  <div class="section">
-    <div class="flex items-center justify-center h-screen">
-      <div>
-        <div class="font-pacifico text-center text-[#CC6E62] text-4xl mb-4 font-bold">Resume</div>
+  <div class="section flex items-center justify-center h-screen">
+    <div>
+      <div class="font-pacifico text-center text-primary text-4xl mb-4 font-bold">Resume</div>
 
-        <img
-          src="https://lube4100.github.io/img/kv-pic.jpg"
-          class="w-full md:w-[550px] object-cover"
-        />
+      <img
+        src="https://lube4100.github.io/img/kv-pic.jpg"
+        class="w-full md:w-[550px] object-cover rounded-lg shadow-lg"
+      />
 
-        <div class="pl-4 pt-2">
-          <p class="text-[#d1a39e] text-lg">Liu Ting Wei</p>
-          <div class="w-12 h-0.5 bg-[#d1a39e] mt-2"></div>
-        </div>
+      <div class="pl-4 pt-2">
+        <p class="text-primary text-lg font-semibold">Liu Ting Wei</p>
+        <div class="w-12 h-0.5 bg-accent mt-2"></div>
       </div>
     </div>
   </div>

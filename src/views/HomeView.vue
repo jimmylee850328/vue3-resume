@@ -1,6 +1,6 @@
 <template>
   <div class="relative">
-    <button @click="toggleMenu" class="fixed top-4 left-4 z-50 text-[#d1a39e] md:hidden">
+    <button @click="toggleMenu" class="fixed top-4 left-4 z-50 text-primary md:hidden">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         class="h-6 w-6"
@@ -20,54 +20,55 @@
     <nav
       id="menu"
       :class="[
-        'bg-[#f5f1e8] fixed left-0 top-0 h-full w-64 p-8 flex flex-col justify-between transition-transform duration-300 ease-in-out z-40',
+        'bg-secondary fixed left-0 top-0 h-full w-64 p-8 flex flex-col justify-between transition-transform duration-300 ease-in-out z-40',
         isMenuOpen ? 'translate-x-0' : '-translate-x-full',
         'md:translate-x-0 lg:w-1/6 md:w-1/5'
       ]"
     >
       <div>
-        <div class="text-[#d1a39e] font-semibold mb-8">
-          <span class="border border-[#d1a39e] px-2 py-1">Tina Liu</span>
+        <div class="text-primary font-semibold mb-8">
+          <span class="border border-primary px-2 py-1">Tina Liu</span>
         </div>
-        <ul class="space-y-4 text-[#d1a39e]">
+        <ul class="space-y-4 text-text">
           <li
             :class="{
-              'font-bold bg-[#d1a39e] text-white px-2 py-1 rounded': currentSection === 'home'
+              'font-bold bg-primary text-secondary px-2 py-1 rounded': currentSection === 'home'
             }"
           >
             <a href="#home" class="block w-full" @click="closeMenu">首頁</a>
           </li>
           <li
             :class="{
-              'font-bold bg-[#d1a39e] text-white px-2 py-1 rounded': currentSection === 'about-me'
+              'font-bold bg-primary text-secondary px-2 py-1 rounded': currentSection === 'about-me'
             }"
           >
             <a href="#about-me" class="block w-full" @click="closeMenu">關於我</a>
           </li>
           <li
             :class="{
-              'font-bold bg-[#d1a39e] text-white px-2 py-1 rounded': currentSection === 'skills'
+              'font-bold bg-primary text-secondary px-2 py-1 rounded': currentSection === 'skills'
             }"
           >
             <a href="#skills" class="block w-full" @click="closeMenu">技能</a>
           </li>
           <li
             :class="{
-              'font-bold bg-[#d1a39e] text-white px-2 py-1 rounded': currentSection === 'portfolio'
+              'font-bold bg-primary text-secondary px-2 py-1 rounded':
+                currentSection === 'portfolio'
             }"
           >
             <a href="#portfolio" class="block w-full" @click="closeMenu">作品</a>
           </li>
           <li
             :class="{
-              'font-bold bg-[#d1a39e] text-white px-2 py-1 rounded': currentSection === 'contact'
+              'font-bold bg-primary text-secondary px-2 py-1 rounded': currentSection === 'contact'
             }"
           >
             <a href="#contact" class="block w-full" @click="closeMenu">聯絡我</a>
           </li>
         </ul>
       </div>
-      <div class="text-sm text-gray-500">© 2024 Tina Liu</div>
+      <div class="text-sm text-text">© 2024 Tina Liu</div>
     </nav>
 
     <div
@@ -105,14 +106,14 @@ import Contact from '@/components/Contact.vue';
 
 const fullpage = ref(null);
 const isMenuOpen = ref(false);
-const currentSection = ref('home'); // Add a reactive variable to track the current section
+const currentSection = ref('home');
 
 const options = {
   scrollOverflow: true,
   scrollBar: false,
   menu: '#menu',
   anchors: ['home', 'about-me', 'skills', 'portfolio', 'contact'],
-  sectionsColor: ['#dcccb2', '#dcccb2', '#dcccb2', '#dcccb2', '#dcccb2'],
+  sectionsColor: ['#fffffe', '#fffffe', '#fffffe', '#fffffe', '#fffffe'],
   afterLoad(origin, destination) {
     currentSection.value = destination.anchor;
   }

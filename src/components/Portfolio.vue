@@ -13,12 +13,12 @@
                   :href="portfolio.githubLink"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="flex items-center justify-center w-8 h-8 bg-primary rounded-full transition-transform duration-200 hover:scale-105 hover:shadow-md"
+                  class="flex items-center justify-center w-8 h-8 bg-accent rounded-full transition-transform duration-200 hover:scale-105 hover:shadow-md"
                 >
                   <img :src="vercelIcon" alt="Vercel" class="w-4 h-4" />
                 </a>
                 <span
-                  class="absolute hidden group-hover:block bg-gray-800 text-white text-xs rounded py-1 px-2 -bottom-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap"
+                  class="absolute hidden group-hover:block bg-primary text-secondary text-xs rounded py-1 px-2 -bottom-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap"
                 >
                   Vercel Demo
                 </span>
@@ -29,23 +29,23 @@
                   :href="portfolio.githubLink"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="flex items-center justify-center w-8 h-8 bg-primary rounded-full transition-transform duration-200 hover:scale-105 hover:shadow-md"
+                  class="flex items-center justify-center w-8 h-8 bg-accent rounded-full transition-transform duration-200 hover:scale-105 hover:shadow-md"
                 >
                   <img :src="githubIcon" alt="GitHub" class="w-4 h-4" />
                 </a>
                 <span
-                  class="absolute hidden group-hover:block bg-gray-800 text-white text-xs rounded py-1 px-2 -bottom-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap"
+                  class="absolute hidden group-hover:block bg-primary text-secondary text-xs rounded py-1 px-2 -bottom-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap"
                 >
                   GitHub Repo
                 </span>
               </div>
             </div>
           </div>
-          <div class="mt-4 mb-8 overflow-hidden rounded shadow">
+          <div class="mt-4 mb-8 overflow-hidden rounded-lg shadow-lg">
             <img class="w-full object-cover" :src="portfolio.imageSrc" :alt="portfolio.title" />
           </div>
           <div class="flex justify-center">
-            <p class="text-left text-secondary text-lg font-medium max-w-[95%]">
+            <p class="text-left text-text text-lg font-medium max-w-[95%]">
               {{ portfolio.description }}
             </p>
           </div>
